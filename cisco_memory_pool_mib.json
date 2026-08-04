@@ -1,67 +1,103 @@
 {
-  "mib": "CISCO-MEMORY-POOL-MIB",
-  "oid_base": ".1.3.6.1.4.1.9.9.48",
-  "description": "Cisco Memory Pool Monitoring MIB for Cisco IOS devices",
-  "objects": {
-    "ciscoMemoryPoolTable": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1",
-      "type": "Table",
-      "description": "A table of memory pool monitoring entries."
-    },
-    "ciscoMemoryPoolEntry": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1",
-      "type": "TableEntry",
-      "description": "An entry containing information about a particular memory pool."
-    },
-    "ciscoMemoryPoolType": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.1",
-      "type": "Integer32",
-      "access": "read-only",
-      "description": "Type of memory pool (1: Processor, 2: I/O, etc.)"
-    },
-    "ciscoMemoryPoolName": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.2",
-      "type": "DisplayString",
-      "access": "read-only",
-      "description": "A textual description of the memory pool."
-    },
-    "ciscoMemoryPoolValid": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.3",
-      "type": "TruthValue",
-      "access": "read-only",
-      "description": "Indicates whether the memory pool entry is valid."
-    },
-    "ciscoMemoryPoolUsed": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.4",
-      "type": "Gauge32",
-      "units": "bytes",
-      "access": "read-only",
-      "description": "Indicates the number of bytes from the pool that are currently in use by the OS."
-    },
-    "ciscoMemoryPoolFree": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.5",
-      "type": "Gauge32",
-      "units": "bytes",
-      "access": "read-only",
-      "description": "Indicates the number of bytes from the pool that are currently free on the OS."
-    },
-    "ciscoMemoryPoolLargestFree": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.6",
-      "type": "Gauge32",
-      "units": "bytes",
-      "access": "read-only",
-      "description": "Indicates the largest contiguous block of free memory in bytes."
-    },
-    "ciscoMemoryPoolAlternative": {
-      "oid": ".1.3.6.1.4.1.9.9.48.1.1.1.7",
-      "type": "Integer32",
-      "access": "read-only",
-      "description": "Identifies an alternate memory pool if this one runs out."
-    }
+  "ciscoMemoryPoolMIB": {
+    "name": "ciscoMemoryPoolMIB",
+    "oid": "1.3.6.1.4.1.9.9.48",
+    "class": "objectidentity"
   },
-  "indexes": {
-    "1": "Processor Memory",
-    "2": "I/O Memory",
-    "3": "PCI Memory"
+  "ciscoMemoryPoolObjects": {
+    "name": "ciscoMemoryPoolObjects",
+    "oid": "1.3.6.1.4.1.9.9.48.1",
+    "class": "objectidentity"
+  },
+  "ciscoMemoryPoolTable": {
+    "name": "ciscoMemoryPoolTable",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1",
+    "nodetype": "table",
+    "class": "objecttype",
+    "description": "A table of memory pool monitoring entries."
+  },
+  "ciscoMemoryPoolEntry": {
+    "name": "ciscoMemoryPoolEntry",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1",
+    "nodetype": "row",
+    "class": "objecttype",
+    "description": "An entry containing information about a particular memory pool."
+  },
+  "ciscoMemoryPoolType": {
+    "name": "ciscoMemoryPoolType",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.1",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "CiscoMemoryPoolTypes",
+      "class": "type"
+    },
+    "description": "The type of memory pool (e.g., 1 for Processor, 2 for I/O)."
+  },
+  "ciscoMemoryPoolName": {
+    "name": "ciscoMemoryPoolName",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.2",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "DisplayString",
+      "class": "type"
+    },
+    "description": "A textual description of the memory pool."
+  },
+  "ciscoMemoryPoolValid": {
+    "name": "ciscoMemoryPoolValid",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.3",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "TruthValue",
+      "class": "type"
+    },
+    "description": "Indicates whether the memory pool entry is valid."
+  },
+  "ciscoMemoryPoolUsed": {
+    "name": "ciscoMemoryPoolUsed",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.4",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Gauge32",
+      "class": "type"
+    },
+    "description": "Indicates the number of bytes from the pool that are currently in use by the operating system."
+  },
+  "ciscoMemoryPoolFree": {
+    "name": "ciscoMemoryPoolFree",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.5",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Gauge32",
+      "class": "type"
+    },
+    "description": "Indicates the number of bytes from the pool that are currently free on the operating system."
+  },
+  "ciscoMemoryPoolLargestFree": {
+    "name": "ciscoMemoryPoolLargestFree",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.6",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Gauge32",
+      "class": "type"
+    },
+    "description": "Indicates the largest contiguous block of free memory in bytes."
+  },
+  "ciscoMemoryPoolAlternative": {
+    "name": "ciscoMemoryPoolAlternative",
+    "oid": "1.3.6.1.4.1.9.9.48.1.1.1.7",
+    "nodetype": "column",
+    "class": "objecttype",
+    "syntax": {
+      "type": "Integer32",
+      "class": "type"
+    },
+    "description": "Identifies an alternate memory pool if this one runs out."
   }
 }
