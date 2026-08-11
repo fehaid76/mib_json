@@ -1,0 +1,72 @@
+{
+  "CiscoLogKeywords": [
+    {
+      "Keyword": "link down",
+      "Severity": 4
+    },
+    {
+      "Keyword": "err-disabled",
+      "Severity": 4
+    },
+    {
+      "Keyword": "authentication failure",
+      "Severity": 4
+    },
+    {
+      "Keyword": "BGP-3-FSM_ERROR",
+      "Severity": 4
+    },
+    {
+      "Keyword": "CPU utilization exceeded",
+      "Severity": 4
+    },
+    {
+      "Keyword": "duplex mismatch",
+      "Severity": 3
+    },
+    {
+      "Keyword": "DHCP address conflict",
+      "Severity": 3
+    },
+    {
+      "Keyword": "config changed",
+      "Severity": 3
+    },
+    {
+      "Keyword": "OSPF-5-ADJCHG",
+      "Severity": 3
+    },
+    {
+      "Keyword": "STP-2-BLOCK_PORT",
+      "Severity": 3
+    },
+    {
+      "Keyword": "line protocol up",
+      "Severity": 2
+    },
+    {
+      "Keyword": "interface up",
+      "Severity": 2
+    },
+    {
+      "Keyword": "BGP-5-ADJCHANGE",
+      "Severity": 2
+    },
+    {
+      "Keyword": "CONFIG_I",
+      "Severity": 1
+    },
+    {
+      "Keyword": "Configured",
+      "Severity": 1
+    },
+    {
+      "Keyword": "SYS-5-RELOAD",
+      "Severity": 1
+    },
+    {
+      "Keyword": "SYS-6-LOGGINGHOST_START",
+      "Severity": 1
+    }
+  ]
+}
