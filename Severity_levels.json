@@ -1,72 +1,160 @@
 {
-  "CiscoLogKeywords": [
+  "NetworkEvents": [
     {
-      "Keyword": "link down",
-      "Severity": 4
+      "Oid": "1.3.6.1.2.1.14.16.2.1",
+      "Name": "ospfVirtIfStateChange",
+      "Severity": 3,
+      "Description": "An ospfVirtIfStateChange trap signifies that there has been a change in the state of an OSPF virtual interface."
     },
     {
-      "Keyword": "err-disabled",
-      "Severity": 4
+      "Oid": "1.3.6.1.2.1.14.16.2.10",
+      "Name": "ospfTxRetransmit",
+      "Severity": 2,
+      "Description": "An ospfTxRetransmit trap signifies than an OSPF packet has been retransmitted on a non-virtual interface."
     },
     {
-      "Keyword": "authentication failure",
-      "Severity": 4
+      "Oid": "1.3.6.1.2.1.14.16.2.11",
+      "Name": "ospfVirtIfTxRetransmit",
+      "Severity": 2,
+      "Description": "An ospfVirtIfTxRetransmit trap signifies than an OSPF packet has been retransmitted on a virtual interface."
     },
     {
-      "Keyword": "BGP-3-FSM_ERROR",
-      "Severity": 4
+      "Oid": "1.3.6.1.2.1.14.16.2.12",
+      "Name": "ospfOriginateLsa",
+      "Severity": 1,
+      "Description": "An ospfOriginateLsa trap signifies that a new LSA has been originated by this router."
     },
     {
-      "Keyword": "CPU utilization exceeded",
-      "Severity": 4
+      "Oid": "1.3.6.1.2.1.14.16.2.13",
+      "Name": "ospfMaxAgeLsa",
+      "Severity": 2,
+      "Description": "An ospfMaxAgeLsa trap signifies that one of the LSAs in the router's link state database has aged to MaxAge."
     },
     {
-      "Keyword": "duplex mismatch",
-      "Severity": 3
+      "Oid": "1.3.6.1.2.1.14.16.2.14",
+      "Name": "ospfLsdbOverflow",
+      "Severity": 4,
+      "Description": "An ospfLsdbOverflow trap signifies that the number of LSAs in the router's link state database has exceeded ospfExtLsdbLimit."
     },
     {
-      "Keyword": "DHCP address conflict",
-      "Severity": 3
+      "Oid": "1.3.6.1.2.1.14.16.2.15",
+      "Name": "ospfLsdbApproachingOverflow",
+      "Severity": 3,
+      "Description": "An ospfLsdbApproachingOverflow trap signifies that the number of LSAs in the database has exceeded 90% of the limit."
     },
     {
-      "Keyword": "config changed",
-      "Severity": 3
+      "Oid": "1.3.6.1.2.1.14.16.2.16",
+      "Name": "ospfIfStateChange",
+      "Severity": 3,
+      "Description": "An ospfIfStateChange trap signifies that there has been a change in the state of a non-virtual OSPF interface."
     },
     {
-      "Keyword": "OSPF-5-ADJCHG",
-      "Severity": 3
+      "Oid": "1.3.6.1.2.1.14.16.2.17",
+      "Name": "ospfNssaTranslatorStatusChange",
+      "Severity": 3,
+      "Description": "Indicates a change in the router's ability to translate OSPF type-7 LSAs into OSPF type-5 LSAs."
     },
     {
-      "Keyword": "STP-2-BLOCK_PORT",
-      "Severity": 3
+      "Oid": "1.3.6.1.2.1.14.16.2.18",
+      "Name": "ospfRestartStatusChange",
+      "Severity": 2,
+      "Description": "Signifies that there has been a change in the graceful restart state for the router."
     },
     {
-      "Keyword": "line protocol up",
-      "Severity": 2
+      "Oid": "1.3.6.1.2.1.14.16.2.19",
+      "Name": "ospfNbrRestartHelperStatusChange",
+      "Severity": 2,
+      "Description": "Signifies a change in the graceful restart helper state for the neighbor."
     },
     {
-      "Keyword": "interface up",
-      "Severity": 2
+      "Oid": "1.3.6.1.2.1.14.16.2.20",
+      "Name": "ospfVirtNbrRestartHelperStatusChange",
+      "Severity": 2,
+      "Description": "Signifies a change in the graceful restart helper state for the virtual neighbor."
     },
     {
-      "Keyword": "BGP-5-ADJCHANGE",
-      "Severity": 2
+      "Oid": "1.3.6.1.2.1.14.16.2.3",
+      "Name": "ospfVirtNbrStateChange",
+      "Severity": 3,
+      "Description": "Signifies that there has been a change in the state of an OSPF virtual neighbor."
     },
     {
-      "Keyword": "CONFIG_I",
-      "Severity": 1
+      "Oid": "1.3.6.1.2.1.14.16.2.4",
+      "Name": "ospfIfConfigError",
+      "Severity": 4,
+      "Description": "Signifies that a packet has been received on a non-virtual interface with conflicting configuration parameters."
     },
     {
-      "Keyword": "Configured",
-      "Severity": 1
+      "Oid": "1.3.6.1.2.1.14.16.2.5",
+      "Name": "ospfVirtIfConfigError",
+      "Severity": 4,
+      "Description": "Signifies that a packet has been received on a virtual interface with conflicting configuration parameters."
     },
     {
-      "Keyword": "SYS-5-RELOAD",
-      "Severity": 1
+      "Oid": "1.3.6.1.2.1.14.16.2.6",
+      "Name": "ospfIfAuthFailure",
+      "Severity": 4,
+      "Description": "Signifies an authentication key or type failure on a non-virtual OSPF interface."
     },
     {
-      "Keyword": "SYS-6-LOGGINGHOST_START",
-      "Severity": 1
+      "Oid": "1.3.6.1.2.1.14.16.2.7",
+      "Name": "ospfVirtIfAuthFailure",
+      "Severity": 4,
+      "Description": "Signifies an authentication key or type failure on a virtual OSPF interface."
+    },
+    {
+      "Oid": "1.3.6.1.2.1.14.16.2.8",
+      "Name": "ospfIfRxBadPacket",
+      "Severity": 4,
+      "Description": "Signifies that an unparsable OSPF packet has been received on a non-virtual interface."
+    },
+    {
+      "Oid": "1.3.6.1.2.1.14.16.2.9",
+      "Name": "ospfVirtIfRxBadPacket",
+      "Severity": 4,
+      "Description": "Signifies that an unparsable OSPF packet has been received on a virtual interface."
+    },
+    {
+      "Oid": "1.3.6.1.6.3.1.1.5.1",
+      "Name": "coldStart",
+      "Severity": 3,
+      "Description": "A coldStart trap signifies that the SNMP entity is reinitializing itself and that its configuration may have been altered."
+    },
+    {
+      "Oid": "1.3.6.1.6.3.1.1.5.2",
+      "Name": "warmStart",
+      "Severity": 2,
+      "Description": "A warmStart trap signifies that the SNMP entity is reinitializing itself such that its configuration is unaltered."
+    },
+    {
+      "Oid": "1.3.6.1.6.3.1.1.5.3",
+      "Name": "linkDown",
+      "Severity": 4,
+      "Description": "A linkDown trap signifies that the sending protocol entity recognizes that one of the communication links has fallen."
+    },
+    {
+      "Oid": "1.3.6.1.6.3.1.1.5.4",
+      "Name": "linkUp",
+      "Severity": 2,
+      "Description": "A linkUp trap signifies that the sending protocol entity recognizes that one of the communication links has come up."
+    },
+    {
+      "Oid": "1.3.6.1.6.3.1.1.5.5",
+      "Name": "authenticationFailure",
+      "Severity": 4,
+      "Description": "An authenticationFailure trap signifies that the SNMP entity has received a protocol message that is not properly authenticated."
+    },
+    {
+      "Oid": "1.3.6.1.4.1.9.9.41.2.0.1",
+      "Name": "DuplexMismatch",
+      "Severity": 3,
+      "Description": "A duplex mismatch discovered on a network interface (e.g., half duplex vs full duplex conflict)."
+    },
+    {
+      "Oid": "1.3.6.1.4.1.9.9.41.2.0.1",
+      "Name": "ciscoSyslogMessageGenerated",
+      "Severity": 3,
+      "Description": "A Cisco proprietary trap generated when a new Syslog message is logged on the device."
     }
   ]
 }
